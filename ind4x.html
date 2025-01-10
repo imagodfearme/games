@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOB</title>
+    <link rel="icon" type="image/png" href="Bor.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .search-container input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 90%;  /* Responsive image */
+            height: auto;
+            border-radius: 8px; /* Optional: adds rounded corners */
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <h1>Bob Kentucky Edu</h1>
+</header>
+
+<div class="search-container">
+    <form id="searchForm" onsubmit="return handleSearch(event)">
+        <input type="text" id="searchBox" placeholder="Search..." required>
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="image-container">
+    <img src="https://www.oxfordlearning.com/wp-content/uploads/2018/09/how-to-help-your-child-focus-in-school.jpeg" alt="Child Focus in School">
+</div>
+
+<script>
+    function handleSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting the default way
+        var query = document.getElementById("searchBox").value.trim().toLowerCase();
+
+        // Check for specific search queries
+        if (query === "how to have fun") {
+            window.location.href = "/ind4x.html"; // Redirect to ind4x.html
+        } else {
+            window.location.href = "4-0-4.html"; // Redirect to 404.html
+        }
+    }
+</script>
+
+</body>
+</html>
